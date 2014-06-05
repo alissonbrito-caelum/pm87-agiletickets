@@ -12,17 +12,6 @@ public class CalculadoraDePrecos {
 
 	public static BigDecimal calcula(Sessao sessao, Integer quantidade) {
 		BigDecimal preco;
-		/*Map<String, String> lista = carregaMapa();
-		String nomeDoMetodo = lista.get(sessao.getEspetaculo().getTipo()
-				.toString());
-		preco = sessao.getPreco(); 
-		if (!nomeDoMetodo.equals("")){
-			Class classe = Class.forName("br.com.caelum.agiletickets.domain.precos.CalculadoraDePreco");
-			Object obj = classe.newInstance();
-			Method metodo = classe.getMethod(nomeDoMetodo);
-			preco = metodo.invoke(obj, sessao);
-		}*/
-
 		if (sessaoEspetaculoTipo(sessao).equals(tipoDeEspetaculoCinema())
 				|| sessaoEspetaculoTipo(sessao)
 						.equals(tipoDeEspetaculoShow())) {
@@ -60,18 +49,6 @@ public class CalculadoraDePrecos {
 	private static TipoDeEspetaculo sessaoEspetaculoTipo(Sessao sessao) {
 		return sessao.getEspetaculo().getTipo();
 	}
-
-	/*private static Map<String, String> carregaMapa() {
-		Map<String, String> lista = new HashMap();
-		lista.put(TipoDeEspetaculo.CINEMA.toString(), "calculaPreco");
-		lista.put(TipoDeEspetaculo.SHOW.toString(), "calculaPreco");
-		lista.put(TipoDeEspetaculo.BALLET.toString(),
-				"calculaPrecoComAumentoDeDuracao");
-		lista.put(TipoDeEspetaculo.ORQUESTRA.toString(),
-				"calculaPrecoComAumentoDeDuracao");
-		lista.put(TipoDeEspetaculo.TEATRO.toString(), "");
-		return lista;
-	}*/
 
 	private static BigDecimal calculaPrecoComAumentoDeDuracao(Sessao sessao) {
 		BigDecimal preco;
