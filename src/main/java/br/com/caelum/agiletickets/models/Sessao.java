@@ -119,4 +119,13 @@ public class Sessao {
 		return preco;
 	}
 	
+
+	public double porcentagemDeIngressosFaltando() {
+		return (getTotalIngressos() - getIngressosReservados()) / getTotalIngressos().doubleValue();
+	}
+ 
+	public BigDecimal precoComAcrescimo(BigDecimal acrescimo){
+		return preco.multiply(acrescimo);
+	}
+	
 }
