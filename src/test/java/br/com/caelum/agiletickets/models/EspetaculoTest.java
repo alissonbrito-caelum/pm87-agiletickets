@@ -88,7 +88,7 @@ public class EspetaculoTest {
 		return sessao;
 	}
 	
-	@Test
+	/*@Test
 	public void deveCriarUmaSessaoParaDatasDeInicioEFimIguaisPeriodicidadeDiaria(){
 		LocalDate inicio = new LocalDate();
 		LocalDate fim = inicio.plusDays(4);//new LocalDate();
@@ -103,5 +103,5 @@ public class EspetaculoTest {
 	@Test
 	public void deveCriarUmaSessaoParaDatasDeInicioEFimIguaisPeriodicidadeSemanal(){
 		
-	}
+	}*/
 }
